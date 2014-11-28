@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<layouts>
+    <default>
+        <reference name="head">
+        	<block type="page/html_head" name="tegdesign_mixpanel_head" template="tegdesign_mixpanel/head.phtml" />
+        </reference>
+    </default>
+    <cms_index_index>
+        <reference name="content">
+            <block type="page/html" name="tegdesign_mixpanel_homepage" template="tegdesign_mixpanel/homepage.phtml" /> 
+        </reference>
+    </cms_index_index>
+	<catalogsearch_result_index>
+		<reference name="after_body_start">
+			<block type="page/html" name="tegdesign_mixpanel_search" template="tegdesign_mixpanel/search.phtml" /> 
+		</reference>
+	</catalogsearch_result_index>
+	<catalogsearch_advanced_result>
+		<reference name="after_body_start">
+			<block type="page/html" name="tegdesign_mixpanel_search_advanced" template="tegdesign_mixpanel/search.phtml" /> 
+		</reference>
+	</catalogsearch_advanced_result>
+	<checkout_onepage_index>
+		<reference name="after_body_start">
+			<block type="page/html" name="tegdesign_mixpanel_checkout" template="tegdesign_mixpanel/checkout.phtml" /> 
+		</reference>
+	</checkout_onepage_index>
+	<catalog_product_view>
+        <reference name="after_body_start">
+            <block type="page/html" name="tegdesign_mixpanel_product" template="tegdesign_mixpanel/product.phtml" />
+        </reference>
+    </catalog_product_view>
+    <customer_account_login>
+    	<reference name="after_body_start">
+            <block type="page/html" name="tegdesign_mixpanel_login" template="tegdesign_mixpanel/login.phtml" />
+        </reference>
+    </customer_account_login>
+    <customer_account_create>
+    	<reference name="after_body_start">
+            <block type="page/html" name="tegdesign_mixpanel_create" template="tegdesign_mixpanel/create.phtml" />
+        </reference>
+    </customer_account_create>
+    <customer_account_index>
+        <reference name="after_body_start">
+            <block type="page/html" name="tegdesign_mixpanel_account" template="tegdesign_mixpanel/account.phtml" />
+        </reference>
+    </customer_account_index>
+    <customer_account_edit>
+        <reference name="after_body_start">
+            <block type="page/html" name="tegdesign_mixpanel_account_edit" template="tegdesign_mixpanel/account_edit.phtml" />
+        </reference>
+    </customer_account_edit>
+    <sales_order_history>
+        <reference name="after_body_start">
+            <block type="page/html" name="tegdesign_mixpanel_sales_history" template="tegdesign_mixpanel/sales_history.phtml" />
+        </reference>
+    </sales_order_history>
+    <wishlist_index_index>
+        <reference name="after_body_start">
+            <block type="page/html" name="tegdesign_mixpanel_wishlist" template="tegdesign_mixpanel/wishlist.phtml" />
+        </reference>
+    </wishlist_index_index>
+    <checkout_cart_index>
+    	<reference name="after_body_start">
+            <block type="page/html" name="tegdesign_mixpanel_cart" template="tegdesign_mixpanel/cart.phtml" />
+        </reference>
+    </checkout_cart_index>
+</layouts>

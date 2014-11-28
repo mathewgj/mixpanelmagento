@@ -1,0 +1,29 @@
+<script>
+if(Ajax.Responders){
+
+    Ajax.Responders.register({
+
+      onComplete: function(data) {
+
+        if(!data.url.include("progress") && !data.url.include("getAdditional")) {
+
+            if(data.url.include("saveOrder")) {
+
+            	mixpanel.track('checkout_process', {
+				    'step': 'place_order_clicked'
+				});
+
+            } else if(accordion.currentSection) {
+
+            	mixpanel.track('checkout_process', {
+				    'step': accordion.currentSection
+				});
+
+            }
+        }
+
+      }
+
+    });
+}
+</script>

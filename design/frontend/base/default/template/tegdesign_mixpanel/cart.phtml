@@ -1,0 +1,20 @@
+<?php
+$quote = Mage::getSingleton('checkout/session')->getQuote();
+$cart = Mage::helper('checkout/cart')->getCart();
+$items = $quote->getAllItems();
+$total = $quote->getGrandTotal();
+$cartSkus = array();
+foreach($items as $item) {
+	$cartSkus[] = $item->getSku();          
+}
+if ($total > 0) {
+?>
+<script>
+mixpanel.track('customer_action', {
+    'action': 'viewed_shopping_cart',
+    'cart_items_count': '<?php echo $cart->getItemsCount(); ?>',
+    'total': <?php echo $total; ?>,
+    'skus': '<?php echo implode(',', $cartSkus); ?>'
+});
+</script>
+<?php } ?>

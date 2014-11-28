@@ -1,0 +1,5 @@
+<script>
+mixpanel.track('viewed_product', {
+    'sku': '<?php echo Mage::registry('current_product')->getSku(); ?>'
+});
+</script>
