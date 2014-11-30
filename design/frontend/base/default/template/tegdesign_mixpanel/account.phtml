@@ -1,4 +1,5 @@
 <script>
+mixpanel.alias('<?php echo $identity; ?>');
 mixpanel.track('customer_action', {
     'action': 'viewed_account_dashboard'
 });
